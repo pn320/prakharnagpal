@@ -1,29 +1,29 @@
-import Image from 'next/image'
-import Head from 'next/head'
-import Link from 'next/link'
 import clsx from 'clsx'
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
-  TwitterIcon,
-  InstagramIcon,
   GitHubIcon,
+  InstagramIcon,
   LinkedInIcon,
+  TwitterIcon,
 } from '@/components/SocialIcons'
+import logoAirbnb from '@/images/logos/airbnb.svg'
+import logoFacebook from '@/images/logos/facebook.svg'
+import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoStarbucks from '@/images/logos/starbucks.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
-import { formatDate } from '@/lib/formatDate'
 
 function MailIcon(props) {
   return (
@@ -101,7 +101,7 @@ function Article({ article }) {
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
-    <Link className="group -m-1 p-1" {...props}>
+    <Link className="group -m-1 p-1" {...props} target="_blank">
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
@@ -115,10 +115,11 @@ function Newsletter() {
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
+        <span className="ml-3"></span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
+        A culimnation of awesomeness. I rest my case. I promise not to take it
+        personally if you don&apos;t sign up...
       </p>
       <div className="mt-6 flex">
         <input
@@ -237,7 +238,7 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
+              className={clsx('absolute inset-0 h-full w-full object-cover')}
             />
           </div>
         ))}
@@ -251,42 +252,45 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
+          Prakhar Nagpal - Software Engineer, Embedded Engineering enthusiast
+          and Geek
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I'm Prakhar, a software engineer based in London. I'm currently finishing up a degree that allowed me to develop a compiler, and operating system, some web apps, write a thesis involving some ML model development and make some videos in my free time!"
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Software engineer, embedded engineering enthusiast and{' '}
+            <span className="text-teal-500">geek</span>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I&apos;m Prakhar, a software engineer based in London. I&apos;m
+            currently finishing up a degree in Computer Science while spending
+            my free time writing compilers, (also an operating system) learning
+            about low latency and embedded systems development, and also doing
+            some web development in my free time. I also love taking photographs!
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
+              href="https://twitter.com/PrakharNagpal1"
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com"
+              href="https://www.instagram.com/aboveaverage_n/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/pn320"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/prakharnagpal/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />

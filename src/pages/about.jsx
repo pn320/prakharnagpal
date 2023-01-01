@@ -1,14 +1,11 @@
-import Image from 'next/image'
-import Head from 'next/head'
-import Link from 'next/link'
 import clsx from 'clsx'
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import {
-  TwitterIcon,
-  InstagramIcon,
-  GitHubIcon,
-  LinkedInIcon,
+  GitHubIcon, InstagramIcon, LinkedInIcon, TwitterIcon
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
@@ -41,7 +38,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Spencer Sharp</title>
+        <title>About - Prakhar Nagpal</title>
         <meta
           name="description"
           content="I’m Spencer Sharp. I live in New York City, where I design the future."
