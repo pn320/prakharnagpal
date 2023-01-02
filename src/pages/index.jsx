@@ -238,7 +238,9 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className={clsx('absolute inset-0 h-full w-full object-cover')}
+              className={clsx(
+                'absolute inset-0 h-full w-full object-cover transition-all duration-200 ease-in hover:scale-[1.15] hover:transition-all'
+              )}
             />
           </div>
         ))}
@@ -270,9 +272,8 @@ export default function Home({ articles }) {
             I&apos;m Prakhar, a software engineer based in London. I&apos;m
             currently finishing up a degree in Computer Science while spending
             my free time writing compilers, (also an operating system) learning
-            about low latency and embedded systems development, and also doing
-            some web development in my free time. I also love taking
-            photographs!
+            about low latency and embedded systems development, as well as web
+            development. I also love taking photographs in my free time!
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
