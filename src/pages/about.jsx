@@ -5,7 +5,10 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import {
-  GitHubIcon, InstagramIcon, LinkedInIcon, TwitterIcon
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
@@ -14,9 +17,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-pink-600 dark:text-zinc-200 dark:hover:text-pink-800"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -41,7 +44,8 @@ export default function About() {
         <title>About - Prakhar Nagpal</title>
         <meta
           name="description"
-          content="I’m Spencer Sharp. I live in New York City, where I design the future."
+          content="I’m Prakhar Nagpal. I live in London, where I (try) to build
+          awesome things"
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -58,15 +62,16 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Spencer Sharp. I live in New York City, where I design the
-              future.
+              I’m Prakhar Nagpal. I live in London, where I{' '}
+              <span className="text-pink-600 dark:text-pink-800">(try)</span> to
+              build awesome things
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                My favorite place to be is in front of my laptop and monitor,
+                sorrounded by the glow of dimly lit fairy lights, silently
+                typing away at the keyboard. Working until I&apos;m able to
+                create something brilliant that changes the world!
               </p>
               <p>
                 The only thing I loved more than computers as a kid was space.
