@@ -116,8 +116,8 @@ function Newsletter() {
         <span className="ml-3"></span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        A culimnation of awesomeness. I rest my case. I promise not to take it
-        personally if you don&apos;t sign up...
+        A culimnation of awesomeness. I promise not to take it personally if you
+        don&apos;t sign up...
       </p>
       <div className="mt-6 flex">
         <input
@@ -202,14 +202,14 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button
+      {/* <Button
         href="/files/prakharcv.pdf"
         variant="secondary"
         className="group mt-6 w-full"
       >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      </Button> */}
     </div>
   )
 }

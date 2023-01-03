@@ -77,10 +77,27 @@ export default function About() {
                 university and haven&apos;t looked back since!
               </p>
               <p>
-                I&apos;ve worked on compilers, an operating system, 
+                As part of my coursework, I&apos;ve worked on compilers (a
+                statically typed language called <b>WACC</b>) with support for
+                object oriented programming and inheritance, an operating system
+                (modelled after the infamous Stanford Operating Systems
+                coursework - <b>Pintos</b>) written in <b>C</b>, and an emulator
+                for a subset of the <b>ARM</b> instruction set.
               </p>
-              <p></p>
-              <p></p>
+              <p>
+                In my free time, I work with compilers (currently working on my
+                own language called <b>Monk</b>), a lot of web development,
+                creative coding (creating stunning visual animations using
+                code), and most recently I&apos;ve been trying to learn about
+                embedded and low latency engineering, i.e{' '}
+                <b>Embedded systems and FPGA programming</b>.
+              </p>
+              <p>
+                I am also slowly learning about Artificial intelligence (who
+                isn&apos;t at this point) and am currently reading Peter
+                Norvig&apos;s - Paradigms of Aritificial Intelligence while
+                trying to write about what I learn as much as possible!
+              </p>
             </div>
           </div>
           <div className="lg:pl-20">
@@ -98,7 +115,7 @@ export default function About() {
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
-                href="mailto:spencer@planetaria.tech"
+                href="mailto:prakhar.nagpal03@gmail.com"
                 icon={MailIcon}
                 className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >
