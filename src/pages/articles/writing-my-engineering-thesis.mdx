@@ -13,6 +13,135 @@ export default (props) => <ArticleLayout meta={meta} {...props} />
  
 It is that time of my degree. I thought I'd make it more fun for myself by writing about the process of researching, coding up, and writing my undergraduate thesis.
 
-```python hello.py
-print("Rendered with Code Hike")
+## What I'm going to be doing
+
+I'm going to be writing an application that, given an event (for example the "Financial Crisis of 2008"), will automatically generate a timeline of events for the supplied event using machine learning and building an index of context relevant articles for events. Sort of like google, except on a much smaller scale. So basically, I'm taking what Sergey Brin and Larry Page did in 2002 and doing it again!
+
+<CH.Scrollycoding>
+## Step 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing something about points, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.
+
+```ts app.ts focus=3:10
+const { lorem, ipsum } = dolor({
+  sit: {
+    amet: 1,
+    consectetur: 2,
+    adipiscing: (elit) => ({
+      sed: elit,
+    }),
+    eiusmod: (tempor) => ({
+      incididunt: tempor,
+    }),
+    ut: (labore) => ({
+      et: labore,
+      dolore: labore + 1,
+    }),
+    magna: (aliqua) => ({
+      ut: aliqua,
+    }),
+    nostrud: (elit) => ({
+      exercitation: elit,
+      ullamco: elit,
+    }),
+    laboris: (elit) => ({
+      nisi: elit,
+    }),
+  },
+})
 ```
+
+---
+
+## Step 2
+
+Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in.
+
+Praesent elementum facilisis leo vel fringilla est ullamcorper eget.
+
+Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+
+Morbi quis commodo.
+
+```ts app.ts focus=11:17
+
+```
+
+---
+
+## Step 3
+
+Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu.
+
+- Nisi lacus sed viverra tellus in
+- Nibh cras pulvinar mattis nunc sed
+- Luctus accumsan tortor posuere ac
+
+Ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+
+```ts app.ts focus=11:14
+const { lorem, ipsum } = dolor({
+  sit: {
+    amet: 1,
+    consectetur: 2,
+    adipiscing: (elit) => ({
+      sed: elit,
+    }),
+    eiusmod: (tempor) => ({
+      incididunt: tempor,
+    }),
+    ut: (labore) => ({
+      et: lorem(labore * ipsum),
+      dolore: lorem(labore + 1),
+    }),
+    nostrud: (elit) => ({
+      exercitation: elit,
+      ullamco: elit,
+    }),
+    laboris: (elit) => ({
+      nisi: elit,
+    }),
+  },
+})
+```
+
+---
+
+## Step 4
+
+Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt.
+
+Sed blandit libero volutpat sed cras.
+
+- Nisi lacus sed viverra tellus in
+- Nibh cras pulvinar mattis nunc sed
+
+Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae.
+
+```ts app.ts focus=15:21
+
+```
+
+---
+
+## Step 5
+
+Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in.
+
+Praesent elementum facilisis leo vel fringilla est ullamcorper eget.
+
+Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat.
+
+Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra.
+
+- Fringilla ut morbi tincidunt augue interdum velit euismod.
+- Luctus accumsan tortor posuere ac ut consequat semper viverra.
+
+Morbi quis commodo.
+
+```ts app.ts
+
+```
+
+</CH.Scrollycoding>
