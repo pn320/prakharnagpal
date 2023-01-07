@@ -18,130 +18,92 @@ It is that time of my degree. I thought I'd make it more fun for myself by writi
 I'm going to be writing an application that, given an event (for example the "Financial Crisis of 2008"), will automatically generate a timeline of events for the supplied event using machine learning and building an index of context relevant articles for events. Sort of like google, except on a much smaller scale. So basically, I'm taking what Sergey Brin and Larry Page did in 2002 and doing it again!
 
 <CH.Scrollycoding>
-## Step 1
+## Setting up our project
 
-Lorem ipsum dolor sit amet, consectetur adipiscing something about points, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.
+Let's set up this project first. We need a python file, and an entry point to the script. Here we have the entry point (that requires an argument, hence the check for `len(args)` list) and some utillity functions defined in another file. For the time being they're just stub functions, we'll fill them in later.
+The graph type is simply an adjacency list representation for the time being. Now let's see how we're going to make our life super easy while running this repeatedly.
 
-```ts app.ts focus=3:10
-const { lorem, ipsum } = dolor({
-  sit: {
-    amet: 1,
-    consectetur: 2,
-    adipiscing: (elit) => ({
-      sed: elit,
-    }),
-    eiusmod: (tempor) => ({
-      incididunt: tempor,
-    }),
-    ut: (labore) => ({
-      et: labore,
-      dolore: labore + 1,
-    }),
-    magna: (aliqua) => ({
-      ut: aliqua,
-    }),
-    nostrud: (elit) => ({
-      exercitation: elit,
-      ullamco: elit,
-    }),
-    laboris: (elit) => ({
-      nisi: elit,
-    }),
-  },
-})
+<CH.Code>
+
+```python main.py focus=5 rows={1}
+#!/usr/bin/env python3
+
+from timeline import scan_index, generate_timeline
+
+if __name__ == "__main__":
+	if not len(args) == 2:
+		return
+	event = args[1]
+	event_graph = scan_index(event)
+    generate_timeline()
 ```
+
+```python timeline.py
+Graph = dict[str, list[str]]
+def scan_index(event: str) -> Graph:
+	return {}
+
+def generate_timeline() -> None:
+	...
+```
+
+</CH.Code>
 
 ---
 
-## Step 2
+## Running the file with the entry point in vim!
+Here we're going to set a keymap since I don't like typing `python3 _filename` everytime I want to run a file in vim. So, we're going to make this file executable first, by running `:!chmod +x %`
 
-Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in.
+<CH.Code>
+```python main.py focus=1
+#!/usr/bin/env python3
 
-Praesent elementum facilisis leo vel fringilla est ullamcorper eget.
+from timeline import scan_index, generate_timeline
 
-Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
-
-Morbi quis commodo.
-
-```ts app.ts focus=11:17
-
+if __name__ == "__main__":
+	if not len(args) == 2:
+		return
+	event = args[1]
+	event_graph = scan_index(event)
+    generate_timeline()
 ```
+
+```python timeline.py
+Graph = dict[str, list[str]]
+def scan_index(event: str) -> Graph:
+	return {}
+
+def generate_timeline() -> None:
+	...
+```
+</CH.Code>
 
 ---
 
-## Step 3
+## Running the file with the entry point in vim!
+Here we're going to set a keymap since I don't like typing `python3 _filename` everytime I want to run a file in vim. So, we're going to make this file executable first, by running `:!chmod +x %`
 
-Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu.
+<CH.Code>
+```python main.py focus=1
+#!/usr/bin/env python3
 
-- Nisi lacus sed viverra tellus in
-- Nibh cras pulvinar mattis nunc sed
-- Luctus accumsan tortor posuere ac
+from timeline import scan_index, generate_timeline
 
-Ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
-
-```ts app.ts focus=11:14
-const { lorem, ipsum } = dolor({
-  sit: {
-    amet: 1,
-    consectetur: 2,
-    adipiscing: (elit) => ({
-      sed: elit,
-    }),
-    eiusmod: (tempor) => ({
-      incididunt: tempor,
-    }),
-    ut: (labore) => ({
-      et: lorem(labore * ipsum),
-      dolore: lorem(labore + 1),
-    }),
-    nostrud: (elit) => ({
-      exercitation: elit,
-      ullamco: elit,
-    }),
-    laboris: (elit) => ({
-      nisi: elit,
-    }),
-  },
-})
+if __name__ == "__main__":
+	if not len(args) == 2:
+		return
+	event = args[1]
+	event_graph = scan_index(event)
+    generate_timeline()
 ```
 
----
+```python timeline.py
+Graph = dict[str, list[str]]
+def scan_index(event: str) -> Graph:
+	return {}
 
-## Step 4
-
-Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt.
-
-Sed blandit libero volutpat sed cras.
-
-- Nisi lacus sed viverra tellus in
-- Nibh cras pulvinar mattis nunc sed
-
-Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae.
-
-```ts app.ts focus=15:21
-
+def generate_timeline() -> None:
+	...
 ```
-
----
-
-## Step 5
-
-Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in.
-
-Praesent elementum facilisis leo vel fringilla est ullamcorper eget.
-
-Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat.
-
-Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra.
-
-- Fringilla ut morbi tincidunt augue interdum velit euismod.
-- Luctus accumsan tortor posuere ac ut consequat semper viverra.
-
-Morbi quis commodo.
-
-```ts app.ts
-
-```
-
+</CH.Code>
 </CH.Scrollycoding>

@@ -249,7 +249,7 @@ export default function Home({ articles }) {
       <Head>
         <title>
           Prakhar Nagpal - Software Engineer, Embedded Engineering enthusiast
-          and Geek
+          and chef?
         </title>
         <meta
           name="description"
@@ -260,7 +260,7 @@ export default function Home({ articles }) {
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Software engineer, embedded engineering enthusiast and{' '}
-            <span className="text-pink-600 dark:text-pink-800">geek</span>
+            <span className="text-pink-600 dark:text-pink-800">home cook</span>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Prakhar, a software engineer based in London. I&apos;m
@@ -302,8 +302,8 @@ export default function Home({ articles }) {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
             <Resume />
+            <Newsletter />
           </div>
         </div>
       </Container>

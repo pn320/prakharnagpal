@@ -1,5 +1,4 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import './prism.css';
 @import '@code-hike/mdx/dist/index.css';
 @import 'tailwindcss/utilities';
