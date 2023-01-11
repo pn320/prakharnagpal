@@ -1,7 +1,7 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 
 const modeScript = `
-  let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: white)')
 
   updateMode()
   darkModeMediaQuery.addEventListener('change', updateModeWithoutTransitions)
@@ -44,6 +44,20 @@ export default function Document() {
           rel="alternate"
           type="application/rss+xml"
           href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.xml`}
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,600;0,700;1,500&display=swap"
+          rel="stylesheet"
         />
         <link
           rel="alternate"

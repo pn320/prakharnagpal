@@ -1,9 +1,16 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
   theme: {
+    fontFamily: {
+      sans: ['Merriweather', ...defaultTheme.fontFamily.sans],
+      serif: ['Oswald', ...defaultTheme.fontFamily.serif],
+      mono: ['Jetbrains Mono', ...defaultTheme.fontFamily.mono]
+    },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
@@ -146,6 +153,8 @@ module.exports = {
             display: 'inline-block',
             color: 'var(--tw-prose-code)',
             fontSize: theme('fontSize.sm')[0],
+            // TODO: change the font family to jetbrains mono
+            backgroundColor: 'transparent',
             fontWeight: theme('fontWeight.medium'),
           },
           'a code': {

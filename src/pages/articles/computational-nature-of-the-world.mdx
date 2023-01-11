@@ -1,0 +1,18 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import { CommonLink } from '@/components/CommonLink'
+
+export const meta = {
+  author: 'Prakhar Nagpal',
+  date: '2023-01-10',
+  title: 'Computational nature of the world',
+  description:
+    'I recently read the Computational nature of the world, and there were several important things I took away from the book. I thought it would be good idea to document them, especially since it addresses several themes that are not found so commonly in Computer Science books. Highly reccommend reading it!',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+## Infinite sums and Zeno's paradox
+
+There is a popular paradox posed by Zeno(?) (I'm not a historian, just a geek who loves puzzles) that goes like this. Suppose there is a tortoise and hare such that the hare can run <b>twice as fast</b> as the tortoise, and the tortoise is given a <b>1000 meter headstart</b>. If the two keep on running, <b>will the hare eventually catch up with the tortoise?</b>
+
+Before we write any equations or formal proofs, let's just write out some steps. Suppose the hare covers 1000 meters, the tortoise will still have

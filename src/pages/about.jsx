@@ -17,9 +17,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-pink-600 dark:text-zinc-200 dark:hover:text-pink-800"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-red-800 dark:text-zinc-200 dark:hover:text-pink-800"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-red-800" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -63,9 +63,7 @@ export default function About() {
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               I’m Prakhar Nagpal. I{' '}
-              <span className="text-pink-600 dark:text-pink-800">
-                (try to){' '}
-              </span>
+              <span className="text-red-800 dark:text-pink-800">(try to) </span>
               build cool things!
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">

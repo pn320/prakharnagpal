@@ -1,0 +1,11 @@
+:root {
+  --pink-800: #9d174d;
+}
+
+.ch-scrollycoding {
+  gap: 2rem;
+}
+
+.ch-scrollycoding-step-content[data-selected] {
+  border-color: transparent;
+}
