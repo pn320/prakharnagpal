@@ -60,12 +60,12 @@ export default function Projects() {
         <title>Projects - Prakhar Nagpal</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the universe."
+          content="All of the cool things I have built over the years!"
         />
       </Head>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, I‘d love to hear from you, especially if you have ideas to improve it or contribute!"
+        title="All of my (almost) billion dollar ideas."
+        intro="All the stuff I've built on my way to building a billion dollar company. It hasn't happened yet, but we move on.If you see something you like, or even better something you'd use that'd be awesome!"
       >
         <ul
           role="list"
@@ -85,7 +85,7 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-pink-800 dark:text-zinc-200">
+              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-red-800 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
               </p>
@@ -94,7 +94,7 @@ export default function Projects() {
         </ul>
         <div className="mt-6 space-y-7 text-center text-lg text-zinc-600 dark:text-zinc-400">
           Nothing to see here.{' '}
-          <span className="font-bold text-pink-800">Yet.</span>
+          <span className="font-bold text-red-800">Yet.</span>
         </div>
       </SimpleLayout>
     </>

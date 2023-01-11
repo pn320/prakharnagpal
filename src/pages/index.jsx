@@ -125,7 +125,7 @@ function Newsletter() {
           placeholder="Email address"
           aria-label="Email address"
           required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-red-800 focus:outline-none focus:ring-4 focus:ring-red-800/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-pink-800 dark:focus:ring-pink-800/10 sm:text-sm"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-red-800 focus:outline-none focus:ring-4 focus:ring-red-800/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-red-800 dark:focus:ring-red-800/10 sm:text-sm"
         />
         <Button type="submit" className="ml-4 flex-none">
           Join
@@ -260,14 +260,15 @@ export default function Home({ articles }) {
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Software engineer, embedded engineering enthusiast and{' '}
-            <span className="text-red-800 dark:text-pink-800">foodie</span>
+            <span className="text-red-800 dark:text-red-800">foodie</span>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Prakhar, a software engineer based in London. I&apos;m
             currently finishing up a degree in Computer Science while spending
             my free time writing compilers, (also an operating system) learning
             about low latency and embedded systems development, as well as web
-            development. I also love taking photographs in my free time!
+            development. I also love taking photographs and cooking in my free
+            time!
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

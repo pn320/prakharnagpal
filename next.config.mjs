@@ -6,6 +6,7 @@ import theme from 'shiki/themes/nord.json' assert { type: 'json' }
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: { esmExternals: true },
   pageExtensions: ['js', 'jsx', 'mdx'],
   reactStrictMode: true,
   experimental: {
@@ -16,7 +17,7 @@ const nextConfig = {
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm, [remarkCodeHike, { theme }]],
+    remarkPlugins: [[remarkCodeHike, { theme: theme }], remarkGfm],
     rehypePlugins: [rehypePrism],
   },
 })

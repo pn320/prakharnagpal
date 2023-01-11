@@ -3,14 +3,14 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  purge: { content: ['./src/**/*.{js,jsx}'] },
+  content: ['./src/**/*.{js,jsx}'],
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
   theme: {
     fontFamily: {
       sans: ['Merriweather', ...defaultTheme.fontFamily.sans],
       serif: ['Oswald', ...defaultTheme.fontFamily.serif],
-      mono: ['Jetbrains Mono', ...defaultTheme.fontFamily.mono]
+      mono: ['Jetbrains Mono', ...defaultTheme.fontFamily.mono],
     },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
