@@ -13,5 +13,5 @@ export function SimpleLayout({ title, intro, children }) {
       </header>
       <div className="mt-16 sm:mt-20">{children}</div>
     </Container>
-  )
+  );
 }
