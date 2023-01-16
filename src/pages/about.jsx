@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { CommonLink } from '@/components/CommonLink'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
@@ -17,6 +18,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
+        target="_blank"
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-red-800 dark:text-zinc-200 dark:hover:text-red-800"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-red-800" />
@@ -68,11 +70,14 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I wish I could say I have been programming since I was 8, or
-                built something amazing when I was in high school, or took part
-                in a Computer Science Olympiad, but honestly I&apos;m just
-                someone who loves programming. I picked it up in first year of
-                university and haven&apos;t looked back since!
+                I picked up programming for the first time in university where I
+                was enrolled in one of the hardest Computing degrees in the
+                world with <b>little to no experience in programming</b> (yes, I
+                really did that). And in all honesty, it was probably the best
+                decision I made. I was exposed to some amazing people (some not
+                so amazing, but such is life), failed more times than I could
+                count, and learned to be more resilient than studying anything
+                else could have made me (Except maybe Physics, f*** that).
               </p>
               <p>
                 As part of my coursework, I&apos;ve worked on compilers (a
@@ -83,12 +88,16 @@ export default function About() {
                 for a subset of the <b>ARM</b> instruction set.
               </p>
               <p>
-                In my free time, I work with compilers (currently working on my
-                own language called <b>Monk</b>), a lot of web development,
-                creative coding (creating stunning visual animations using
-                code), and most recently I&apos;ve been trying to learn about
-                embedded and low latency engineering, i.e{' '}
-                <b>Embedded systems and FPGA programming</b>.
+                I am available as a freelancer, and am currently working as a
+                contracted software engineer working to build the product for a
+                wonderful startup called{' '}
+                <CommonLink href="https://beta-staging.autair.co.uk/">
+                  Autair
+                </CommonLink>{' '}
+                so if you have any ideas you think are going to be big and
+                famous, and just want a gorgeous (almost impossible to pull off)
+                website to show them off, let me know. I love a challenge more
+                than anything!
               </p>
               <p>
                 I am also slowly learning about Artificial intelligence (who
@@ -100,16 +109,31 @@ export default function About() {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
+              <SocialLink
+                href="https://twitter.com/PrakharNagpal1"
+                icon={TwitterIcon}
+              >
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+              <SocialLink
+                href="https://www.instagram.com/justwaterplease.03/"
+                icon={InstagramIcon}
+                className="mt-4"
+              >
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+              <SocialLink
+                href="https://github.com/pn320"
+                icon={GitHubIcon}
+                className="mt-4"
+              >
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+              <SocialLink
+                href="https://www.linkedin.com/in/prakharnagpal/"
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
