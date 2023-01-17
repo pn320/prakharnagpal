@@ -1,0 +1,86 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import { CommonLink } from '@/components/CommonLink'
+
+export const meta = {
+  author: 'Prakhar Nagpal',
+  date: '2023-01-17',
+  title: 'Distributed Algorithms and Erlang',
+  description:
+    'COMP60009 at Imperial College London. A complete introduction to distributed systems and algorithms that run on them.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Notes for COMP60009 - Distributed Algorithms.
+
+## #1. What constitutes a distributed system and algorithms
+
+Essentially, when we think of a distributed system we have to think of it as a system made up of 2 main parts.
+
+- The first is the components (_processes_) that make up the system and perform the computation or handle requests. This could be anything from an entire computer, a processor on a computer, or even a thread running on a processor on a computer. It could
+
+## #2. Elixir Basics (mostly the stuff I'm trying to understand)
+
+- _Data types_: There's some basic data types like `int, float, bool, list, tuple`
+- _Atoms_: This is one of the constructs that I think will seem more useful as time goes
+
+## #3. Processes and message passing
+
+A simple example of a server and client communicating in Elixir,
+
+<CH.Scrollycoding>
+## #3.1. System setup and overview
+
+Here we want to create a simple system with one server and client communicating and this is how we're going to do it in Elixir.
+
+<CH.Code>
+
+```elixir cluster.exs
+defmodule System do
+
+def start do
+    # spawning a node at the address specified
+    server = Node.spawn(:'server_node@172.19.1.21', Server, :start, [])
+    client = Node.spawn(:'server_node@172.19.1.20', Client, :start, [])
+
+
+end
+```
+
+</CH.Code>
+
+---
+
+## #3.2 Server setup
+
+Here we're going to describe how the server should respond to messages it recieves from _for the time being_ a single client (we will expand this to handle multiple clients). We set it up to catch any messages in a variable
+
+<CH.Code>
+
+```elixir server.exs
+defmodule Server do
+
+def start do
+end
+```
+
+</CH.Code>
+
+---
+
+## #3.3 Client communication
+
+Here we're going to set up the client module to send messages to the server of the type `circle` or `square` and recieve the responses.
+
+<CH.Code>
+
+```elixir client.exs
+defmodule Client do
+
+def start do
+end
+```
+
+</CH.Code>
+
+</CH.Scrollycoding>

@@ -3,3 +3,9 @@
 @import '@code-hike/mdx/dist/index.css';
 @import 'codehike-custom.css';
 @import 'tailwindcss/utilities';
+
+@layer base {
+  code {
+    word-spacing: -5px;
+  }
+}

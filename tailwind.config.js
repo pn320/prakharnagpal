@@ -66,7 +66,7 @@ module.exports = {
           '--tw-prose-hr': theme('colors.zinc.100'),
           '--tw-prose-quote-borders': theme('colors.zinc.200'),
           '--tw-prose-captions': theme('colors.zinc.400'),
-          '--tw-prose-code': theme('colors.zinc.700'),
+          '--tw-prose-code': theme('colors.red.800'),
           '--tw-prose-code-bg': theme('colors.zinc.300 / 0.2'),
           '--tw-prose-pre-code': theme('colors.zinc.600'),
           '--tw-prose-pre-bg': theme('colors.zinc.900'),
@@ -155,7 +155,6 @@ module.exports = {
             display: 'inline-block',
             color: 'var(--tw-prose-code)',
             fontSize: theme('fontSize.sm')[0],
-            // TODO: change the font family to jetbrains mono
             backgroundColor: 'transparent',
             fontWeight: theme('fontWeight.medium'),
           },
@@ -196,8 +195,8 @@ module.exports = {
             paddingLeft: theme('spacing.6'),
           },
           li: {
-            marginTop: theme('spacing.6'),
-            marginBottom: theme('spacing.6'),
+            marginTop: theme('spacing.2'),
+            marginBottom: theme('spacing.0'),
             paddingLeft: theme('spacing[3.5]'),
           },
           'li::marker': {

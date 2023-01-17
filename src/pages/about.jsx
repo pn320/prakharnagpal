@@ -72,7 +72,7 @@ export default function About() {
               <p>
                 I picked up programming for the first time in university where I
                 was enrolled in one of the hardest Computing degrees in the
-                world with <b>little to no experience in programming</b> (yes, I
+                world with <i>little to no experience in programming</i> (yes, I
                 really did that). And in all honesty, it was probably the best
                 decision I made. I was exposed to some amazing people (some not
                 so amazing, but such is life), failed more times than I could
