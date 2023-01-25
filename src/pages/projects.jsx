@@ -94,7 +94,7 @@ export default function Projects() {
         </ul>
         <div className="mt-6 space-y-7 text-center text-lg text-zinc-600 dark:text-zinc-400">
           Nothing to see here.{' '}
-          <span className="font-bold text-red-800">Yet.</span>
+          <span className="font-bold italic text-red-800">Yet.</span>
         </div>
       </SimpleLayout>
     </>

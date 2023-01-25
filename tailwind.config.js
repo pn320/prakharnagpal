@@ -109,8 +109,11 @@ module.exports = {
           // Headings
           'h2, h3': {
             color: 'var(--tw-prose-headings)',
+            fontWeight: theme('fontWeight.light'),
             fontFamily: 'Oswald',
-            fontWeight: theme('fontWeight.normal'),
+          },
+          h1: {
+            fontWeight: theme('fontWeight.light'),
           },
           h2: {
             fontSize: theme('fontSize.2xl')[0],

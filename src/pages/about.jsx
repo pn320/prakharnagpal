@@ -63,7 +63,7 @@ export default function About() {
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="font-serif text-4xl font-normal tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <h1 className="font-serif text-4xl font-light tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               I’m Prakhar Nagpal. I{' '}
               <span className="text-red-800 dark:text-red-800">(try to) </span>
               build cool things!
