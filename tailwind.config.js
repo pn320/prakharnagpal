@@ -8,7 +8,7 @@ module.exports = {
   plugins: [require('@tailwindcss/typography')],
   theme: {
     fontFamily: {
-      sans: ['Merriweather', ...defaultTheme.fontFamily.sans],
+      sans: ['Uber Move Text', ...defaultTheme.fontFamily.sans],
       serif: ['Oswald', ...defaultTheme.fontFamily.serif],
       mono: ['Jetbrains Mono', ...defaultTheme.fontFamily.mono],
     },

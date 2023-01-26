@@ -143,15 +143,13 @@ function NavItem({ href, children }) {
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition',
-          isActive
-            ? 'text-red-800 dark:text-red-800'
-            : 'hover:text-red-800 dark:hover:text-red-800'
+          'relative block px-3 py-2 font-normal transition',
+          isActive ? 'text-red-800' : 'hover:text-red-800'
         )}
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-red-800/0 via-red-800/40 to-red-800/0 dark:from-red-800/0 dark:via-red-800/40 dark:to-red-800/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-red-800/0 via-red-800/40 to-red-800/0" />
         )}
       </Link>
     </li>

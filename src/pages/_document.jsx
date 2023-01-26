@@ -55,10 +55,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap"
           rel="stylesheet"
-        />
+        /> */}
         <link
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,600;0,700;1,500&display=swap"
           rel="stylesheet"
@@ -73,6 +73,10 @@ export default function Document() {
           href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
           integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC"
           crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.cdnfonts.com/css/uber-move-text"
+          rel="stylesheet"
         />
       </Head>
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
