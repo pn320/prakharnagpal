@@ -258,7 +258,7 @@ export default function Home({ articles }) {
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="font-serif text-4xl font-light tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          <h1 className="font-serif text-4xl font-normal tracking-tightest text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Software engineer, embedded engineering enthusiast and{' '}
             <span className="text-red-800 dark:text-red-800">foodie</span>
           </h1>

@@ -7,9 +7,14 @@ module.exports = {
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
   theme: {
+    extend: {
+      letterSpacing: {
+        tightest: '-.075em',
+      },
+    },
     fontFamily: {
       sans: ['Uber Move Text', ...defaultTheme.fontFamily.sans],
-      serif: ['Oswald', ...defaultTheme.fontFamily.serif],
+      serif: ['Uber Move Text', ...defaultTheme.fontFamily.serif],
       mono: ['Jetbrains Mono', ...defaultTheme.fontFamily.mono],
     },
     fontSize: {
@@ -109,22 +114,20 @@ module.exports = {
           // Headings
           'h2, h3': {
             color: 'var(--tw-prose-headings)',
-            fontWeight: theme('fontWeight.light'),
-            fontFamily: 'Oswald',
-          },
-          h1: {
-            fontWeight: theme('fontWeight.light'),
+            fontWeight: theme('fontWeight.normal'),
+            letterSpacing: theme('letterSpacing.tightest'),
+            fontFamily: 'Uber Move Text',
           },
           h2: {
             fontSize: theme('fontSize.2xl')[0],
             lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.20'),
+            marginTop: theme('spacing.12'),
             marginBottom: theme('spacing.4'),
           },
           h3: {
             fontSize: theme('fontSize.lg')[0],
             lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.16'),
+            marginTop: theme('spacing.8'),
             marginBottom: theme('spacing.4'),
           },
           ':is(h2, h3) + *': {
