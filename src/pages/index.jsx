@@ -6,12 +6,7 @@ import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '@/components/SocialIcons'
+import { GitHubIcon } from '@/components/SocialIcons'
 import logoFive from '@/images/logos/five.svg'
 import logoImperial from '@/images/logos/imperial.svg'
 import image1 from '@/images/photos/image-1.jpg'
@@ -202,14 +197,14 @@ function Resume() {
           </li>
         ))}
       </ol>
-      {/* <Button
+      <Button
         href="/files/prakharcv.pdf"
         variant="secondary"
         className="group mt-6 w-full"
       >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button> */}
+      </Button>
     </div>
   )
 }
@@ -262,16 +257,16 @@ export default function Home({ articles }) {
             Software engineer, embedded engineering enthusiast and{' '}
             <span className="text-red-800 dark:text-red-800">foodie</span>
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Prakhar, a software engineer based in London. I&apos;m
-            currently finishing up a degree in Computer Science while spending
-            my free time writing compilers, (also an operating system) learning
-            about low latency and embedded systems development, as well as web
-            development. I also love taking photographs and cooking in my free
-            time!
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 lg:text-medium">
+            I&apos;m Prakhar Nagpal, a software engineer based in London.
+            I&apos;m currently finishing up a degree in Computer Science at
+            Imperial College London. I love simple code, compilers and
+            programming languages, operating systems, learning about low latency
+            and embedded systems development, as well as web development. I also
+            love taking photographs and cooking in my free time!
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink
+            {/* <SocialLink
               href="https://twitter.com/PrakharNagpal1"
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
@@ -280,17 +275,17 @@ export default function Home({ articles }) {
               href="https://www.instagram.com/aboveaverage_n/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
-            />
+            /> */}
             <SocialLink
               href="https://github.com/pn320"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
-            <SocialLink
+            {/* <SocialLink
               href="https://www.linkedin.com/in/prakharnagpal/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
-            />
+            /> */}
           </div>
         </div>
       </Container>

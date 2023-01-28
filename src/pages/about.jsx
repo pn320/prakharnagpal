@@ -5,12 +5,7 @@ import Link from 'next/link'
 
 import { CommonLink } from '@/components/CommonLink'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '@/components/SocialIcons'
+import { GitHubIcon } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
@@ -68,16 +63,13 @@ export default function About() {
               <span className="text-red-800 dark:text-red-800">(try to) </span>
               build cool things!
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400 lg:text-medium">
               <p>
                 I picked up programming for the first time in university where I
-                was enrolled in one of the hardest Computing degrees in the
-                world with <i>little to no experience in programming</i> (yes, I
-                really did that). And in all honesty, it was probably the best
-                decision I made. I was exposed to some amazing people (some not
-                so amazing, but such is life), failed more times than I could
-                count, and learned to be more resilient than studying anything
-                else could have made me (Except maybe Physics, f*** that).
+                was I was exposed to some amazing people (some not so amazing,
+                but such is life), failed more times than I could count, and
+                learned to be more resilient than studying anything else could
+                have made me (Except maybe Physics, f*** that).
               </p>
               <p>
                 As part of my coursework, I&apos;ve worked on compilers (a
@@ -110,31 +102,11 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
               <SocialLink
-                href="https://twitter.com/PrakharNagpal1"
-                icon={TwitterIcon}
-              >
-                Follow on Twitter
-              </SocialLink>
-              <SocialLink
-                href="https://www.instagram.com/justwaterplease.03/"
-                icon={InstagramIcon}
-                className="mt-4"
-              >
-                Follow on Instagram
-              </SocialLink>
-              <SocialLink
                 href="https://github.com/pn320"
                 icon={GitHubIcon}
                 className="mt-4"
               >
-                Follow on GitHub
-              </SocialLink>
-              <SocialLink
-                href="https://www.linkedin.com/in/prakharnagpal/"
-                icon={LinkedInIcon}
-                className="mt-4"
-              >
-                Follow on LinkedIn
+                GitHub
               </SocialLink>
               <SocialLink
                 href="mailto:prakhar.nagpal03@gmail.com"

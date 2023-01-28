@@ -20,10 +20,12 @@ module.exports = {
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
-      base: ['1rem', { lineHeight: '1.75rem' }],
-      lg: ['1.125rem', { lineHeight: '1.75rem' }],
+      base: ['1rem', { lineHeight: '1.65rem' }],
+      medium: ['1.065rem', { lineHeight: '1.65rem' }],
+      lg: ['1.125rem', { lineHeight: '1.65rem' }],
       xl: ['1.25rem', { lineHeight: '2rem' }],
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
+      '5/2xl': ['1.7rem', { lineHeight: '2.125rem' }],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
       '4xl': ['2rem', { lineHeight: '2.5rem' }],
       '5xl': ['3rem', { lineHeight: '3.5rem' }],
@@ -101,7 +103,8 @@ module.exports = {
 
           // Base
           color: 'var(--tw-prose-body)',
-          lineHeight: theme('lineHeight.7'),
+          lineHeight: '1.60rem',
+          fontSize: theme('fontSize.medium'),
           '> *': {
             marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.10'),
@@ -119,10 +122,10 @@ module.exports = {
             fontFamily: 'Uber Move Text',
           },
           h2: {
-            fontSize: theme('fontSize.2xl')[0],
-            lineHeight: theme('lineHeight.5'),
-            marginTop: theme('spacing.8'),
-            marginBottom: theme('spacing.4'),
+            fontSize: theme('fontSize.5/2xl')[0],
+            lineHeight: theme('lineHeight.6'),
+            marginTop: theme('spacing.10'),
+            marginBottom: theme('spacing.6'),
           },
           h3: {
             fontSize: theme('fontSize.lg')[0],
