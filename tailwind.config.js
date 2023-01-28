@@ -120,14 +120,14 @@ module.exports = {
           },
           h2: {
             fontSize: theme('fontSize.2xl')[0],
-            lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.12'),
+            lineHeight: theme('lineHeight.5'),
+            marginTop: theme('spacing.8'),
             marginBottom: theme('spacing.4'),
           },
           h3: {
             fontSize: theme('fontSize.lg')[0],
-            lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.8'),
+            lineHeight: theme('lineHeight.4'),
+            marginTop: theme('spacing.4'),
             marginBottom: theme('spacing.4'),
           },
           ':is(h2, h3) + *': {

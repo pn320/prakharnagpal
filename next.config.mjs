@@ -4,7 +4,9 @@ import nextMDX from '@next/mdx'
 import rehypeKatex from 'rehype-katex'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
-import theme from 'shiki/themes/nord.json' assert { type: 'json' }
+import { createRequire } from 'module'
+const require = createRequire(import.meta.url)
+const theme = require('./src/codehiketheme')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
