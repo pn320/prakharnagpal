@@ -104,7 +104,7 @@ module.exports = {
           // Base
           color: 'var(--tw-prose-body)',
           lineHeight: '1.60rem',
-          fontSize: theme('fontSize.medium'),
+          fontSize: theme('fontSize.base'),
           '> *': {
             marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.10'),
@@ -124,13 +124,13 @@ module.exports = {
           h2: {
             fontSize: theme('fontSize.5/2xl')[0],
             lineHeight: theme('lineHeight.6'),
-            marginTop: theme('spacing.10'),
-            marginBottom: theme('spacing.6'),
+            marginTop: theme('spacing.16'),
+            marginBottom: theme('spacing.4'),
           },
           h3: {
             fontSize: theme('fontSize.lg')[0],
             lineHeight: theme('lineHeight.4'),
-            marginTop: theme('spacing.4'),
+            marginTop: theme('spacing.8'),
             marginBottom: theme('spacing.4'),
           },
           ':is(h2, h3) + *': {
