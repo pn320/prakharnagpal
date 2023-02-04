@@ -13,48 +13,10 @@ export default (props) => <ArticleLayout meta={meta} {...props} />
  
 It is that time of my degree. I thought I'd make it more fun for myself by writing about the process of researching, coding up, and writing my undergraduate thesis.
 
-## What I'm going to be doing
-
 My thesis, _Automated Temporal Relation Extraction and Ordering_, aims to answer the question of whether we can use NLP to extract temporal relationships and order them (in order to completely automate the tedious process of generating timelines) from text.
 
-### Background on Natural Language Processing
+---
 
-```python
-def get_val_from_trit(trit: list[int]) -> int:
-    # O(n)
-    ans = 0
-    for i, val in enumerate(trit):
-        ans += pow(3, i) * val
-    return ans
+## Background on Natural Language Processing
 
-
-def succ(nums: list[int]) -> list[int]:
-    # O(n) + O(log3n) => O(n)
-    val = get_val_from_trit(nums) + 1
-    res = []
-    while val != 0:
-        res.append(val % 3)
-        val = val // 3
-    return res
-
-
-def leq(nums1: list[int], nums2: list[int]) -> bool:
-    # O(n), n is the length of longer list
-    return get_val_from_trit(nums1) <= get_val_from_trit(nums2)
-
-
-def tritwise_min(nums1: list[int], nums2: list[int]) -> list[int]:
-    # O(n) where n is the length of longer list
-    res = []
-    for v1, v2 in itertools.zip_longest(nums1, nums2, fillvalue=0):
-        res.append(min(v1, v2))
-    return res
-
-
-def f(lower_bound: list[int], upper_bound: list[int]) -> list[int]:
-    next = succ(lower_bound)
-    return tritwise_min(next, lower_bound)
-
-if __name__ == "__main__":
-    print(f([2, 0, 1], [1, 1, 1]))
-```
+In this section we're going to go over (briefly!) the basic underpinnings of modern NLP, most of this is a summary of <CommonLink href="https://web.stanford.edu/~jurafsky/slp3/ed3book_jan72023.pdf">James H. Martin's Speech and Language Processing</CommonLink> as well as some portions of <CommonLink href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Georgia Tech's intro to NLP notes</CommonLink>.

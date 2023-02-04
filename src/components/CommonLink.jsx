@@ -5,7 +5,7 @@ export function CommonLink({ href, children }) {
     <Link
       href={href}
       target="_blank"
-      className="text-red-800 decoration-transparent dark:text-red-700"
+      className="font-normal text-black decoration-black underline-offset-2 transition-all duration-300 ease-in hover:text-inherit hover:drop-shadow-sm"
     >
       {children}
     </Link>

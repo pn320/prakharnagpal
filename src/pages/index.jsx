@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import { GitHubIcon } from '@/components/SocialIcons'
+import { GitHubIcon, MailIcon } from '@/components/SocialIcons'
 import logoFive from '@/images/logos/five.svg'
 import logoImperial from '@/images/logos/imperial.svg'
 import image1 from '@/images/photos/image-1.jpg'
@@ -18,7 +18,7 @@ import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 
-function MailIcon(props) {
+function MailIconNewsletter(props) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -107,7 +107,7 @@ function Newsletter() {
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
+        <MailIconNewsletter className="h-6 w-6 flex-none" />
         <span className="ml-3"></span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
@@ -120,7 +120,7 @@ function Newsletter() {
           placeholder="Email address"
           aria-label="Email address"
           required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-red-800 focus:outline-none focus:ring-4 focus:ring-red-800/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-red-800 dark:focus:ring-red-800/10 sm:text-sm"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-red-800 focus:outline-none focus:ring-2 focus:ring-red-800/10 sm:text-sm"
         />
         <Button type="submit" className="ml-4 flex-none">
           Join
@@ -197,14 +197,6 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button
-        href="/files/prakharcv.pdf"
-        variant="secondary"
-        className="group mt-6 w-full"
-      >
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
     </div>
   )
 }
@@ -257,7 +249,7 @@ export default function Home({ articles }) {
             Software engineer, embedded engineering enthusiast and{' '}
             <span className="text-red-800 dark:text-red-800">foodie</span>
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 lg:text-medium">
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Prakhar Nagpal, a software engineer based in London.
             I&apos;m currently finishing up a degree in Computer Science at
             Imperial College London. I love simple code, compilers and
@@ -280,6 +272,11 @@ export default function Home({ articles }) {
               href="https://github.com/pn320"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
+            />
+            <SocialLink
+              href="mailto:prakhar.nagpal03@gmail.com"
+              aria-label="Get in touch!"
+              icon={MailIcon}
             />
             {/* <SocialLink
               href="https://www.linkedin.com/in/prakharnagpal/"

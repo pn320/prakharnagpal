@@ -64,8 +64,9 @@ export default function Projects() {
         />
       </Head>
       <SimpleLayout
-        title="All of my (almost) billion dollar ideas."
-        intro="All the stuff I've built on my way to building a billion dollar company. It hasn't happened yet, but we move on.If you see something you like, or even better something you'd use that'd be awesome!"
+        title="All of my billion dollar ideas."
+        color={'(almost)'}
+        intro="All the stuff I've built on my way to building a billion dollar company (that makes the world a better place, obviously). It hasn't happened yet, but it will. If you see something you like, or even better something you'd use that'd be awesome!"
       >
         <ul
           role="list"

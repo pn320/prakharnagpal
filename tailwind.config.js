@@ -20,7 +20,7 @@ module.exports = {
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
-      base: ['1rem', { lineHeight: '1.65rem' }],
+      base: ['1rem', { lineHeight: '1.6em' }],
       medium: ['1.065rem', { lineHeight: '1.65rem' }],
       lg: ['1.125rem', { lineHeight: '1.65rem' }],
       xl: ['1.25rem', { lineHeight: '2rem' }],
@@ -103,8 +103,9 @@ module.exports = {
 
           // Base
           color: 'var(--tw-prose-body)',
-          lineHeight: '1.60rem',
-          fontSize: theme('fontSize.base'),
+          '*': {
+            fontSize: theme('fontSize.base'[0]),
+          },
           '> *': {
             marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.10'),
@@ -122,13 +123,16 @@ module.exports = {
             fontFamily: 'Uber Move Text',
           },
           h2: {
-            fontSize: theme('fontSize.5/2xl')[0],
+            fontSize: theme('fontSize.2xl')[0],
+            '@screen lg': {
+              fontSize: '1.875rem'
+            },
             lineHeight: theme('lineHeight.6'),
-            marginTop: theme('spacing.16'),
+            marginTop: theme('spacing.12'),
             marginBottom: theme('spacing.4'),
           },
           h3: {
-            fontSize: theme('fontSize.lg')[0],
+            fontSize: theme('fontSize.xl')[0],
             lineHeight: theme('lineHeight.4'),
             marginTop: theme('spacing.8'),
             marginBottom: theme('spacing.4'),
@@ -251,13 +255,13 @@ module.exports = {
 
           // Horizontal rules
           hr: {
-            marginTop: theme('spacing.20'),
-            marginBottom: theme('spacing.20'),
+            marginTop: theme('spacing.6'),
+            marginBottom: theme('spacing.6'),
             borderTopWidth: '1px',
             borderColor: 'var(--tw-prose-hr)',
             '@screen lg': {
-              marginLeft: `calc(${theme('spacing.12')} * -1)`,
-              marginRight: `calc(${theme('spacing.12')} * -1)`,
+              marginLeft: `calc(${theme('spacing.12')} * -0.01)`,
+              marginRight: `calc(${theme('spacing.12')} * -0.01)`,
             },
           },
 

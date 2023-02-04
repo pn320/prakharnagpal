@@ -1,38 +1,9 @@
-import clsx from 'clsx'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { CommonLink } from '@/components/CommonLink'
 import { Container } from '@/components/Container'
-import { GitHubIcon } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
-
-function SocialLink({ className, href, children, icon: Icon }) {
-  return (
-    <li className={clsx(className, 'flex')}>
-      <Link
-        href={href}
-        target="_blank"
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-red-800 dark:text-zinc-200 dark:hover:text-red-800"
-      >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-red-800" />
-        <span className="ml-4">{children}</span>
-      </Link>
-    </li>
-  )
-}
-
-function MailIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
-      />
-    </svg>
-  )
-}
 
 export default function About() {
   return (
@@ -63,7 +34,7 @@ export default function About() {
               <span className="text-red-800 dark:text-red-800">(try to) </span>
               build cool things!
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400 lg:text-medium">
+            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400art">
               <p>
                 I picked up programming for the first time in university where I
                 was I was exposed to some amazing people (some not so amazing,
@@ -98,24 +69,6 @@ export default function About() {
                 trying to write about what I learn as much as possible!
               </p>
             </div>
-          </div>
-          <div className="lg:pl-20">
-            <ul role="list">
-              <SocialLink
-                href="https://github.com/pn320"
-                icon={GitHubIcon}
-                className="mt-4"
-              >
-                GitHub
-              </SocialLink>
-              <SocialLink
-                href="mailto:prakhar.nagpal03@gmail.com"
-                icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-              >
-                prakhar.nagpal03@gmail.com
-              </SocialLink>
-            </ul>
           </div>
         </div>
       </Container>
