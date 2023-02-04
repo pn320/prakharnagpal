@@ -1,9 +1,10 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import Mermaid from '@/components/Mermaid';
 import { CommonLink } from '@/components/CommonLink'
 
 export const meta = {
   author: 'Prakhar Nagpal',
-  date: '2023-01-04',
+  date: '2023-02-04',
   title: 'Writing my undergraduate thesis',
   description:
     'I decided to document the thought process and progress that went into writing my thesis for the final year of my BEng degree at Imperial. This is a thesis exploring the possibility of generating timelines for events using some custom machine learning models and building a google-like search index but one that works for a smaller subset of pages.',
@@ -20,3 +21,12 @@ My thesis, _Automated Temporal Relation Extraction and Ordering_, aims to answer
 ## Background on Natural Language Processing
 
 In this section we're going to go over (briefly!) the basic underpinnings of modern NLP, most of this is a summary of <CommonLink href="https://web.stanford.edu/~jurafsky/slp3/ed3book_jan72023.pdf">James H. Martin's Speech and Language Processing</CommonLink> as well as some portions of <CommonLink href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Georgia Tech's intro to NLP notes</CommonLink>.
+
+<Mermaid chart={`
+	graph LR;
+		A[Input text]-->B[Normalization];
+		B-->C[Transformations];
+		C-->D[Time and temporal reasoning];
+`}/>
+
+The next section goes here

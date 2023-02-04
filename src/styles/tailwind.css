@@ -4,6 +4,12 @@
 @import 'codehike-custom.css';
 @import 'tailwindcss/utilities';
 
+@layer components {
+  .webkit-center {
+    text-align: -webkit-center;
+  }
+}
+
 @layer base {
   code {
     word-spacing: -5px;
