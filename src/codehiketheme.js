@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'codehike',
+  name: 'docs',
   type: 'dark',
   colors: {
     'editor.background': '#212121',

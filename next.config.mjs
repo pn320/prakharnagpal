@@ -1,10 +1,10 @@
 import { remarkCodeHike } from '@code-hike/mdx'
 import rehypePrism from '@mapbox/rehype-prism'
 import nextMDX from '@next/mdx'
+import { createRequire } from 'module'
 import rehypeKatex from 'rehype-katex'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
-import { createRequire } from 'module'
 const require = createRequire(import.meta.url)
 const theme = require('./src/codehiketheme')
 
