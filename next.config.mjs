@@ -1,5 +1,4 @@
 import { remarkCodeHike } from '@code-hike/mdx'
-import rehypePrism from '@mapbox/rehype-prism'
 import nextMDX from '@next/mdx'
 import { createRequire } from 'module'
 import rehypeKatex from 'rehype-katex'
@@ -22,7 +21,7 @@ const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [[remarkCodeHike, { theme: theme }], remarkGfm, remarkMath],
-    rehypePlugins: [rehypePrism, rehypeKatex],
+    rehypePlugins: [rehypeKatex],
   },
 })
 
