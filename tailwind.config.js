@@ -106,7 +106,7 @@ module.exports = {
           '*': {
             fontSize: theme('fontSize.base'[0]),
           },
-          '> *': {
+          '> :not(ul, ol)': {
             marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.10'),
           },
@@ -125,7 +125,7 @@ module.exports = {
           h2: {
             fontSize: theme('fontSize.2xl')[0],
             '@screen lg': {
-              fontSize: '1.875rem'
+              fontSize: '1.875rem',
             },
             lineHeight: theme('lineHeight.6'),
             marginTop: theme('spacing.12'),
