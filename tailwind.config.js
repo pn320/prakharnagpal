@@ -82,11 +82,11 @@ module.exports = {
               fontSize: '1.875rem',
             },
             lineHeight: theme('lineHeight.6'),
-            marginTop: theme('spacing.12'),
+            marginTop: theme('spacing.8'),
             marginBottom: theme('spacing.4'),
           },
           h3: {
-            fontSize: theme('fontSize.xl')[0],
+            fontSize: theme('fontSize.5/2xl')[0],
             lineHeight: theme('lineHeight.4'),
             marginTop: theme('spacing.8'),
             marginBottom: theme('spacing.4'),
