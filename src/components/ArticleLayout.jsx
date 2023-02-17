@@ -36,9 +36,9 @@ export function ArticleLayout({
         <title>{`${meta.title} - Prakhar Nagpal`}</title>
         <meta name="description" content={meta.description} />
       </Head>
-      <Container className="mt-16 lg:mt-32">
+      <Container className="mt-16 lg:mt-32 w-full">
         <div className="xl:relative">
-          <div className="mx-auto sm:max-w-2xl lg:max-w-4xl">
+          <div className="mx-auto sm:max-w-2xl lg:max-w-7xl">
             {previousPathname && (
               <button
                 type="button"

@@ -1,5 +1,3 @@
-// based on https://github.com/dimitrisnl/nord-wave/blob/master/themes/Nord%20Wave-color-theme.json
-
 module.exports = {
   name: 'code-hike-docs',
   type: 'dark',
@@ -10,8 +8,8 @@ module.exports = {
     'tab.activeBackground': '#212121',
     'tab.inactiveBackground': '#292929',
     'tab.inactiveForeground': '#a0a0a0',
-    // "tab.activeBorder": "#88c0d0",
-    // "tab.border": "#212121",
+    "tab.activeBorder": "#88c0d0",
+    "tab.border": "#212121",
     'editorGroup.border': '#1f1f1f',
     'editorGroupHeader.tabsBackground': '#323232',
     'editorLineNumber.foreground': '#aaaaaa',
