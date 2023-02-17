@@ -6,6 +6,15 @@
   gap: 2rem;
 }
 
+.ch-code-scroll-parent {
+  word-spacing: -1px;
+}
+
+.ch-scrollycoding-step-content {
+  min-height: min-content;
+  cursor: pointer;
+}
+
 .ch-scrollycoding-step-content[data-selected] {
   border-color: transparent;
 }

@@ -1,0 +1,74 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Mermaid from '@/components/Mermaid';
+import { CommonLink } from '@/components/CommonLink'
+
+export const meta = {
+  author: 'Prakhar Nagpal',
+  date: '2023-02-09',
+  title: 'Creating my own language in Python',
+  description:
+    'I decided to write a compiler in Python! And really write one this time, everything from an interpreter, to a virtual machine for a language that was easy to write in, with good semantics and an easy to follow pattern of thought.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+This is something I've been wanting to do for a while, especially since the release of pattern matching in `Python3.10`. So, in this blog post I'm going to go over how I 
+wrote the compiler for my own toy programming language _Monk_.
+
+So, let's define the syntax of the language and quickly whip up a lexer. Then we can move on to the more interesting things in life.
+I'd like for the language to be clean, statically typed and have a good amount of syntactic sugar to make life easier for myself, especially compared to writing Java or C++.
+This is a bunch of simple programs in the language,
+
+<CH.Scrollycoding>
+**Simple assignment statements with types**
+The language uses a simple, clean assignment statement. Put the value inside the `{}` braces and prefix it with a `=`.
+<CH.Code lineNumbers={true}>
+
+```monk sample.mnk 
+int x ={15}
+int y ={20}
+string s ={"hello, world!"}
+float d ={20.0}
+```
+
+</CH.Code>
+
+---
+**Simple arithmetic operations**
+Pretty self explanatory, basic support for arithmetic operations. At the moment, only the `int` and `float` types are supported for numerics, althought I might add some more in the future
+
+<CH.Code lineNumbers={true}>
+
+```monk sample.mnk 
+int x ={15}
+int y ={20}
+int z ={x+y}
+// `int` is a subtype of `double`
+double d ={x + y} 
+```
+
+</CH.Code>
+---
+**Printing values**
+Any simple values go simply in the function call. Yes, `print` is a function call. I would love to have it be like 
+<CommonLink href="https://doc.rust-lang.org/book/ch01-02-hello-world.html#anatomy-of-a-rust-program">Rust's print macro</CommonLink>
+but I prefer to be sane for atleast another couple of years. You can see, if you want to print an inline expression just add the `={<expr>}` in the print call.
+<CH.Code lineNumbers={true}>
+
+```monk sample.mnk 
+int x ={15}
+int y ={20}
+string s ={"hello, world!"}
+println!(s)
+$ 'hello, world!'
+println!(={x + y})
+$ 35 
+```
+
+</CH.Code>
+</CH.Scrollycoding>
+--- 
+## Writing the lexer
+
+The lexer is pretty simple. I've chosen to use regex to write the lexer by hand. I like using regex because, well who doesn't like regex? I've written some in the past using the simple character by character scan 
+with a peek mechanism but honestly, I can't be bothered. This is just an exercise for fun and to establish a language I like writing code in. So let's jump into it.

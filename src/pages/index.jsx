@@ -64,19 +64,6 @@ function BriefcaseIcon(props) {
   )
 }
 
-function ArrowDownIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
 function Article({ article }) {
   return (
     <Card as="article">
@@ -258,16 +245,6 @@ export default function Home({ articles }) {
             love taking photographs and cooking in my free time!
           </p>
           <div className="mt-6 flex gap-6">
-            {/* <SocialLink
-              href="https://twitter.com/PrakharNagpal1"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://www.instagram.com/aboveaverage_n/"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            /> */}
             <SocialLink
               href="https://github.com/pn320"
               aria-label="Follow on GitHub"
@@ -278,11 +255,6 @@ export default function Home({ articles }) {
               aria-label="Get in touch!"
               icon={MailIcon}
             />
-            {/* <SocialLink
-              href="https://www.linkedin.com/in/prakharnagpal/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            /> */}
           </div>
         </div>
       </Container>
