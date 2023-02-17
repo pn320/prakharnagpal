@@ -5,14 +5,14 @@ import { CommonLink } from '@/components/CommonLink'
 export const meta = {
   author: 'Prakhar Nagpal',
   date: '2023-02-09',
-  title: 'Creating my own language in Python',
+  title: 'Creating my own language in Rust',
   description:
-    'I decided to write a compiler in Python! And really write one this time, everything from an interpreter, to a virtual machine for a language that was easy to write in, with good semantics and an easy to follow pattern of thought.',
+    'I decided to write a compiler in Rust! And really write one this time, everything from an interpreter, to a virtual machine for a language that was easy to write in, with good semantics and an easy to follow pattern of thought.',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-This is something I've been wanting to do for a while, especially since the release of pattern matching in `Python3.10`. So, in this blog post I'm going to go over how I 
+This is something I've been wanting to do for a while, especially since <CommonLink href="https://www.rust-lang.org/">Rust</CommonLink> gained traction and I decided to learn it. So, in this blog post I'm going to go over how I 
 wrote the compiler for my own toy programming language _Monk_.
 
 So, let's define the syntax of the language and quickly whip up a lexer. Then we can move on to the more interesting things in life.
@@ -52,17 +52,20 @@ double d ={x + y}
 **Printing values**
 Any simple values go simply in the function call. Yes, `print` is a function call. I would love to have it be like 
 <CommonLink href="https://doc.rust-lang.org/book/ch01-02-hello-world.html#anatomy-of-a-rust-program">Rust's print macro</CommonLink>
-but I prefer to be sane for atleast another couple of years. You can see, if you want to print an inline expression just add the `={<expr>}` in the print call.
+but I prefer to be sane for atleast another couple of years. If you want to print an inline expression just add the `={<expr>}` in the print call. At some point I might add support for `f-strings` like python does,
+but for the moment we're sticking with this.
 <CH.Code lineNumbers={true}>
 
-```monk sample.mnk 
-int x ={15}
-int y ={20}
-string s ={"hello, world!"}
-println!(s)
-$ 'hello, world!'
-println!(={x + y})
-$ 35 
+```shellscript pn320@localhost
+$ imnk
+Welcome to Monk(s) interpreter. A simple programming language
+|>> int x ={15}
+|>> int y ={5}
+|>> println!(={x+y})
+15
+|>> string s ={"hello, world!"}
+|>> println!(s)
+
 ```
 
 </CH.Code>
@@ -70,5 +73,4 @@ $ 35
 --- 
 ## Writing the lexer
 
-The lexer is pretty simple. I've chosen to use regex to write the lexer by hand. I like using regex because, well who doesn't like regex? I've written some in the past using the simple character by character scan 
-with a peek mechanism but honestly, I can't be bothered. This is just an exercise for fun and to establish a language I like writing code in. So let's jump into it.
+The lexer is pretty simple. I've chosen to use a character by character scan and peek mechanism to write the lexer by hand. I'll be going over the components briefly, especially basic syntax error handling
