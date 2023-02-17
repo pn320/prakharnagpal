@@ -3,7 +3,7 @@
 }
 
 .ch-scrollycoding {
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .ch-code-scroll-parent {
@@ -11,10 +11,11 @@
 }
 
 .ch-scrollycoding-step-content {
-  min-height: min-content;
+  min-height: min-content !important;
   cursor: pointer;
 }
 
 .ch-scrollycoding-step-content[data-selected] {
   border-color: transparent;
+  @apply border-zinc-300;
 }
