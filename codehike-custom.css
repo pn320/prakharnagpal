@@ -3,11 +3,19 @@
 }
 
 .ch-scrollycoding {
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .ch-code-scroll-parent {
   word-spacing: -1px;
+}
+
+.ch-scrollycoding-sticker {
+  flex: 1;
+}
+
+.ch-scrollycoding-content {
+  min-width: 50%;
 }
 
 .ch-scrollycoding-step-content {
@@ -15,7 +23,14 @@
   cursor: pointer;
 }
 
+.ch-codegroup {
+  max-height: none !important;
+}
+
 .ch-scrollycoding-step-content[data-selected] {
   border-color: transparent;
-  @apply border-zinc-300;
+  @apply border-zinc-400;
+  @apply border-opacity-30;
+  @apply rounded-lg;
+  @apply border;
 }
