@@ -24,7 +24,7 @@
 }
 
 .ch-codegroup {
-  max-height: none !important;
+  /*max-height: none !important;*/
 }
 
 .ch-scrollycoding-step-content[data-selected] {

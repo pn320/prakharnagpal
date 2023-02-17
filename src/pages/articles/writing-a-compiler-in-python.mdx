@@ -28,6 +28,7 @@ So, we have `<type> terribly_named_variable ={<expr>}`
 ```monk sample.mnk 
 int x ={15}
 int y ={20}
+bool t ={True}
 string s ={"hello, world!"}
 float d ={20.0}
 ```
@@ -78,3 +79,81 @@ go along.
 The lexer is pretty simple.
 I&apos;ve chosen to use a character by character scan and peek mechanism to write the lexer by hand.
 I&apos;ll be going over the components briefly, especially basic syntax error handling (unterminated strings, etc.)
+
+<CH.Scrollycoding>
+**Defining the tokens**
+This is where we define the tokens that we're going to output.
+<CH.Code lineNumbers={true}>
+
+```rust lexer.rs
+#[derive(Debug, Clone)]
+pub enum TokenType {
+    // Single-character tokens.
+    LeftParen,
+    RightParen,
+    LeftBrace,
+    RightBrace,
+    Comma,
+    Plus,
+    CarriageReturn,
+    Tab,
+    // some more tokens here, -, *, ., etc.
+
+    // One or two character tokens.
+    Bang,
+    BangEqual,
+    Equal,
+    EqualEqual,
+    // plus some more >=, <=, >, <
+
+    // Literals.
+    Identifier,
+    String,
+    Integer,
+
+    // Types
+    IntType,
+    StrType,
+    FloatType,
+    BoolType,
+
+    // Keywords.
+    And,
+    False,
+    Function,
+    End,
+    Some,
+    Or,
+    Print,
+    True,
+    EOF,
+}
+```
+
+</CH.Code>
+
+---
+**The lexer class**
+Now, let's define the lexer class and see how this is going to look. We need a couple of things here.
+First we need
+
+<CH.Code>
+```rust lexer.rs focus=6,15
+#[derive(Debug, Clone)]
+pub enum TokenType {
+    ...
+}
+
+pub struct Scanner {
+    source: String,
+    tokens: Vec<Token>,
+    line: u32,
+    start_pos: u32,
+    current_pos: u32,
+    // mostly for error reporting
+    col_offset: u32,
+    keywords_map: HashMap<String, TokenType>,
+}
+```
+</CH.Code>
+</CH.Scrollycoding>
