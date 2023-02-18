@@ -5,7 +5,7 @@ import { CommonLink } from '@/components/CommonLink'
 export const meta = {
   author: 'Prakhar Nagpal',
   date: '2023-02-09',
-  title: 'Creating my own language in Rust',
+  title: 'Creating my own programming language in Rust',
   description:
     'I decided to write a compiler in Rust! And really write one this time, everything from an interpreter, to a virtual machine for a language that was easy to write in, with good semantics and an easy to follow pattern of thought.',
 }
@@ -89,44 +89,23 @@ This is where we define the tokens that we're going to output.
 #[derive(Debug, Clone)]
 pub enum TokenType {
     // Single-character tokens.
-    LeftParen,
-    RightParen,
-    LeftBrace,
-    RightBrace,
-    Comma,
-    Plus,
-    CarriageReturn,
-    Tab,
+    LeftParen, RightParen, LeftBrace,
+    RightBrace, Comma, Plus, CarriageReturn, Tab,
     // some more tokens here, -, *, ., etc.
 
     // One or two character tokens.
-    Bang,
-    BangEqual,
-    Equal,
-    EqualEqual,
+    Bang, BangEqual, Equal, EqualEqual,
     // plus some more >=, <=, >, <
 
     // Literals.
-    Identifier,
-    String,
-    Integer,
+    Identifier, String, Integer,
 
     // Types
-    IntType,
-    StrType,
-    FloatType,
-    BoolType,
+    IntType, StrType, FloatType, BoolType,
 
     // Keywords.
-    And,
-    False,
-    Function,
-    End,
-    Some,
-    Or,
-    Print,
-    True,
-    EOF,
+    And, False, Function, End,
+    Some, Or, Print, True, EOF,
 }
 ```
 
@@ -135,10 +114,24 @@ pub enum TokenType {
 ---
 **The lexer class**
 Now, let's define the lexer class and see how this is going to look. We need a couple of things here.
-First we need
 
 <CH.Code>
-```rust lexer.rs focus=6,15
+```rust lexer.rs focus=6,8
+#[derive(Debug, Clone)]
+pub enum TokenType {
+    ...
+}
+
+pub struct Scanner {
+    ...
+}
+```
+</CH.Code>
+---
+The first thing we need for the `Scanner` struct is a field for the source string so we can scan over it, obviously.
+
+<CH.Code>
+```rust lexer.rs focus=7
 #[derive(Debug, Clone)]
 pub enum TokenType {
     ...
@@ -146,14 +139,8 @@ pub enum TokenType {
 
 pub struct Scanner {
     source: String,
-    tokens: Vec<Token>,
-    line: u32,
-    start_pos: u32,
-    current_pos: u32,
-    // mostly for error reporting
-    col_offset: u32,
-    keywords_map: HashMap<String, TokenType>,
 }
 ```
 </CH.Code>
+---
 </CH.Scrollycoding>
