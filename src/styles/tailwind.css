@@ -10,6 +10,11 @@
   }
 }
 
+@font-face {
+  font-family: 'Uber Move Regular';
+  src: url("/fonts/UberMove-Regular.ttf");
+}
+
 @layer base {
   code {
     word-spacing: -5px;

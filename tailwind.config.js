@@ -13,7 +13,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Uber Move Text', ...defaultTheme.fontFamily.sans],
-      serif: ['Uber Move Text', ...defaultTheme.fontFamily.serif],
+      serif: ['Uber Move Regular', ...defaultTheme.fontFamily.serif],
       mono: ['Jetbrains Mono', ...defaultTheme.fontFamily.mono],
     },
     fontSize: {
@@ -73,8 +73,8 @@ module.exports = {
           'h2, h3': {
             color: 'var(--tw-prose-headings)',
             fontWeight: theme('fontWeight.normal'),
-            letterSpacing: theme('letterSpacing.tightest'),
-            fontFamily: 'Uber Move Text',
+            letterSpacing: theme('letterSpacing.tight'),
+            fontFamily: 'Uber Move Regular',
           },
           h2: {
             fontSize: theme('fontSize.2xl')[0],
@@ -197,8 +197,8 @@ module.exports = {
             backgroundColor: 'var(--tw-prose-pre-bg)',
             borderRadius: theme('borderRadius.3xl'),
             padding: theme('spacing.8'),
+            boxShadow: theme('boxShadow.sm'),
             overflowX: 'auto',
-            border: '1px solid',
             borderColor: 'var(--tw-prose-pre-border)',
           },
           'pre code': {

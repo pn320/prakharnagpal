@@ -19,73 +19,25 @@ So, let's define the syntax of the language and quickly whip up a lexer. Then we
 I'd like for the language to be clean, statically typed and have a good amount of syntactic sugar to make life easier for myself, especially compared to writing Java or C++.
 These are some of the basic features I've implemented so far.
 
-<CH.Scrollycoding>
-**Simple assignment statements with types**
-The language uses a simple, clean assignment statement. Put the value inside the `{}` braces and prefix it with a `=`.
-So, we have `<type> terribly_named_variable ={<expr>}`
-<CH.Code lineNumbers={true}>
-
-```monk sample.mnk 
-int x ={15}
-int y ={20}
-bool t ={True}
-string s ={"hello, world!"}
-float d ={20.0}
-```
-
-</CH.Code>
-
 ---
-**Simple arithmetic operations**
-Pretty self explanatory, basic support for arithmetic operations. At the moment, only the `int` and `float` types are supported for numerics, althought I might add some more in the future
 
-<CH.Code lineNumbers={true}>
-
-```monk sample.mnk focus=3,5
-int x ={15}
-int y ={20}
-int z ={x+y}
-// `int` is a subtype of `double`
-double d ={x + y} 
-```
-
-</CH.Code>
----
-**Printing values**
-Any simple values go simply in the function call. Yes, `print` is a function call. I would love to have it be like 
-<CommonLink href="https://doc.rust-lang.org/book/ch01-02-hello-world.html#anatomy-of-a-rust-program">Rust's print macro</CommonLink>
-but I prefer to be sane for atleast another couple of years. If you want to print an inline expression just add the `={<expr>}` in the print call. At some point I might add support for `f-strings` like 
-<CommonLink href="https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings">python</CommonLink> does, but for the moment we're sticking with this.
-<CH.Code lineNumbers={true}>
-
-```monk sample.mnk focus=4,5,6
-int x ={15}
-int y ={20}
-string s ={"hello, world!"}
-println!("the value of x is ", x)
-println!(={x+y})
-println!(s, " world!")
-```
-
-</CH.Code>
-</CH.Scrollycoding>
-
-Right. We now have a baseline for the syntax and how we express basic functionality. We can hammer out the rest later as we
-go along.
-
----
 ## Writing the lexer
 
-The lexer is pretty simple.
-I&apos;ve chosen to use a character by character scan and peek mechanism to write the lexer by hand.
+
+The lexer is pretty simple. I&apos;ve chosen to use a character by character scan and peek mechanism to write the lexer by hand.
 I&apos;ll be going over the components briefly, especially basic syntax error handling (unterminated strings, etc.)
 
+
 <CH.Scrollycoding>
+
 **Defining the tokens**
 This is where we define the tokens that we're going to output.
+
 <CH.Code lineNumbers={true}>
 
-```rust lexer.rs
+
+```rust lexer.rs main.rs
+// it has been fixed finally!
 #[derive(Debug, Clone)]
 pub enum TokenType {
     // Single-character tokens.
@@ -107,15 +59,20 @@ pub enum TokenType {
     And, False, Function, End,
     Some, Or, Print, True, EOF,
 }
+
 ```
+
 
 </CH.Code>
 
+
 ---
+
 **The lexer class**
 Now, let's define the lexer class and see how this is going to look. We need a couple of things here.
 
 <CH.Code>
+
 ```rust lexer.rs focus=6,8
 #[derive(Debug, Clone)]
 pub enum TokenType {
@@ -126,11 +83,16 @@ pub struct Scanner {
     ...
 }
 ```
+
 </CH.Code>
+
 ---
+
 The first thing we need for the `Scanner` struct is a field for the source string so we can scan over it, obviously.
 
+
 <CH.Code>
+
 ```rust lexer.rs focus=7
 #[derive(Debug, Clone)]
 pub enum TokenType {
@@ -140,7 +102,11 @@ pub enum TokenType {
 pub struct Scanner {
     source: String,
 }
+
 ```
+
 </CH.Code>
+
 ---
+
 </CH.Scrollycoding>

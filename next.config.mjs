@@ -20,7 +20,7 @@ const nextConfig = {
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [[remarkCodeHike, { theme: theme }], remarkGfm, remarkMath],
+    remarkPlugins: [[remarkCodeHike, { theme: theme, showCopyButton: true }], remarkGfm, remarkMath],
     rehypePlugins: [rehypeKatex],
   },
 })

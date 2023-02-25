@@ -5,6 +5,11 @@
 .ch-scrollycoding {
   gap: 1.5rem;
 }
+/*.ch-editor-frame,*/
+/*.ch-frame-title-bar,*/
+/*.ch-code-wrapper {*/
+/*  @apply bg-transparent !important;*/
+/*}*/
 
 .ch-code-scroll-parent {
   word-spacing: -1px;
@@ -12,6 +17,7 @@
 
 .ch-scrollycoding-sticker {
   flex: 1;
+  font-variant-ligatures: none;
 }
 
 .ch-scrollycoding-content {
@@ -23,9 +29,23 @@
   cursor: pointer;
 }
 
-.ch-codegroup {
-  /*max-height: none !important;*/
-}
+/*.ch-codegroup {*/
+/*  @apply backdrop-blur;*/
+/*  box-shadow: none;*/
+/*}*/
+
+/*.ch-frame-button {*/
+/*  background: transparent !important;*/
+/*  @apply border-zinc-800;*/
+/*}*/
+
+/*.ch-codegroup .ch-code-button {*/
+/*  display: none;*/
+/*}*/
+
+/*.ch-codegroup:hover .ch-code-button {*/
+/*  display: block;*/
+/*}*/
 
 .ch-scrollycoding-step-content[data-selected] {
   border-color: transparent;
