@@ -11,8 +11,13 @@
 }
 
 @font-face {
+  font-family: 'Iosevka';
+  src: url('/fonts/iosevka-medium.ttc');
+}
+
+@font-face {
   font-family: 'Uber Move Regular';
-  src: url("/fonts/UberMove-Regular.ttf");
+  src: url('/fonts/UberMove-Regular.ttf');
 }
 
 @layer base {

@@ -14,7 +14,7 @@ module.exports = {
     fontFamily: {
       sans: ['Uber Move Text', ...defaultTheme.fontFamily.sans],
       serif: ['Uber Move Regular', ...defaultTheme.fontFamily.serif],
-      mono: ['Jetbrains Mono', ...defaultTheme.fontFamily.mono],
+      mono: ['Iosevka', ...defaultTheme.fontFamily.mono],
     },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
