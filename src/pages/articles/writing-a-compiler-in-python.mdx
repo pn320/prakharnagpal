@@ -1,5 +1,5 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
-import Mermaid from '@/components/Mermaid';
+import Mermaid from '@/components/Mermaid'
 import { CommonLink } from '@/components/CommonLink'
 
 export const meta = {
@@ -12,101 +12,11 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-This is something I've been wanting to do for a while, especially since <CommonLink href="https://www.rust-lang.org/">Rust</CommonLink> gained traction and I decided to learn it. So, in this blog post I'm going to go over how I 
+This is something I've been wanting to do for a while, especially since <CommonLink href="https://www.rust-lang.org/">Rust</CommonLink> gained traction and I decided to learn it. So, in this blog post I'm going to go over how I
 wrote the compiler for my own toy programming language _Monk_.
 
 So, let's define the syntax of the language and quickly whip up a lexer. Then we can move on to the more interesting things in life.
 I'd like for the language to be clean, statically typed and have a good amount of syntactic sugar to make life easier for myself, especially compared to writing Java or C++.
-These are some of the basic features I've implemented so far.
+I'm going to go over some example programs in the languages so you get an idea of the syntax and features expected from any language.
 
 ---
-
-## Writing the lexer
-
-
-The lexer is pretty simple. I&apos;ve chosen to use a character by character scan and peek mechanism to write the lexer by hand.
-I&apos;ll be going over the components briefly, especially basic syntax error handling (unterminated strings, etc.)
-
-
-<CH.Scrollycoding>
-
-**Defining the tokens**
-This is where we define the tokens that we're going to output.
-
-<CH.Code lineNumbers={true}>
-
-
-```rust lexer.rs main.rs
-// it has been fixed finally!
-#[derive(Debug, Clone)]
-pub enum TokenType {
-    // Single-character tokens.
-    LeftParen, RightParen, LeftBrace,
-    RightBrace, Comma, Plus, CarriageReturn, Tab,
-    // some more tokens here, -, *, ., etc.
-
-    // One or two character tokens.
-    Bang, BangEqual, Equal, EqualEqual,
-    // plus some more >=, <=, >, <
-
-    // Literals.
-    Identifier, String, Integer,
-
-    // Types
-    IntType, StrType, FloatType, BoolType,
-
-    // Keywords.
-    And, False, Function, End,
-    Some, Or, Print, True, EOF,
-}
-
-```
-
-
-</CH.Code>
-
-
----
-
-**The lexer class**
-Now, let's define the lexer class and see how this is going to look. We need a couple of things here.
-
-<CH.Code>
-
-```rust lexer.rs focus=6,8
-#[derive(Debug, Clone)]
-pub enum TokenType {
-    ...
-}
-
-pub struct Scanner {
-    ...
-}
-```
-
-</CH.Code>
-
----
-
-The first thing we need for the `Scanner` struct is a field for the source string so we can scan over it, obviously.
-
-
-<CH.Code>
-
-```rust lexer.rs focus=7
-#[derive(Debug, Clone)]
-pub enum TokenType {
-    ...
-}
-
-pub struct Scanner {
-    source: String,
-}
-
-```
-
-</CH.Code>
-
----
-
-</CH.Scrollycoding>

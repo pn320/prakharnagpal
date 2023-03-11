@@ -223,11 +223,11 @@ export default function Home({ articles }) {
       <Head>
         <title>
           Prakhar Nagpal - Software Engineer, Embedded Engineering enthusiast
-          and chef?
+          and foodie
         </title>
         <meta
           name="description"
-          content="I'm Prakhar, a software engineer based in London. I'm currently finishing up a degree that allowed me to develop a compiler, and operating system, some web apps, write a thesis involving some ML model development and make some videos in my free time!"
+          content="I'm Prakhar, a software engineer based in London."
         />
       </Head>
       <Container className="mt-9">
