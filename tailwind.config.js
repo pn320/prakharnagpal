@@ -121,12 +121,12 @@ module.exports = {
           code: {
             display: 'inline-block',
             color: 'var(--tw-prose-code)',
-            fontSize: theme('fontSize.sm')[0],
+            fontSize: theme('fontSize.base')[0],
             backgroundColor: 'var(--tw-prose-code-bg)',
             paddingLeft: theme('spacing.1'),
             paddingRight: theme('spacing.1'),
             borderRadius: theme('borderRadius.md'),
-            fontWeight: theme('fontWeight.semibold'),
+            fontWeight: theme('fontWeight.regular'),
           },
           'a code': {
             color: 'inherit',

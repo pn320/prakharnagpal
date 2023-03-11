@@ -17,6 +17,24 @@ wrote the compiler for my own toy programming language _Monk_.
 
 So, let's define the syntax of the language and quickly whip up a lexer. Then we can move on to the more interesting things in life.
 I'd like for the language to be clean, statically typed and have a good amount of syntactic sugar to make life easier for myself, especially compared to writing Java or C++.
-I'm going to go over some example programs in the languages so you get an idea of the syntax and features expected from any language.
 
 ---
+
+## Defining the language syntax
+
+<CH.Scrollycoding>
+
+**Basic types and printing**
+`Monk` has several basic types, `u32, f32, String, Vec<type>, char` corresponding to a 32 bit unsigned integer, 32 bit floating point, strings (more on their internal representation later), vectors of various types, and characters (single bit stores). I've also borrowed Rust's style of `print` statements, although we might switch to Python style `f-strings` later.
+
+<CH.Code lineNumbers={true}>
+```text assignment.mnk
+str: String = "hello, world!"
+x: u32 = 63
+y: f32 = 63.0
+c: char = 'a'
+num_vec: Vec<u32> = [1, 2, 3]
+```
+</CH.Code>
+
+</CH.Scrollycoding>
